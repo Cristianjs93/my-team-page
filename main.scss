@@ -1,0 +1,148 @@
+.container {
+  padding: 5px;
+  font-family: "Poppins", serif;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // 1. Div con contenido de texto
+  .content {
+    padding: 5px;
+    margin-bottom: 40px;
+
+    .content__title {
+      font-family: "Times New Roman";
+      letter-spacing: -2px;
+      margin-bottom: 10px;
+    }
+
+    .content__info {
+      @media (min-width: 1440px) {
+        width: 350px;
+        transform: scale(0.8);
+      }
+    }
+
+    .content__info__title {
+      margin-bottom: 8px;
+    }
+
+    .content__info__paragraph {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      min-width: 53%;
+    }
+  }
+
+  // 2. Div con contenido de imagenes
+  .container-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @mixin container-images__img($margin-top: 0px) {
+      width: 160px;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin: 0;
+      margin-top: $margin-top;
+      margin-right: 10px;
+
+      @media (min-width: 1440px) {
+        width: 200px;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0;
+        margin-top: $margin-top;
+      }
+    }
+
+    .container-images__img1 {
+      @include container-images__img;
+    }
+    .container-images__img2 {
+      @include container-images__img($margin-top: 50px);
+    }
+    .container-images__img3 {
+      @include container-images__img;
+    }
+    .container-images__img4 {
+      @include container-images__img($margin-top: 50px);
+    }
+    .container-images__img5 {
+      @include container-images__img;
+    }
+    .container-images__img6 {
+      @include container-images__img($margin-top: 50px);
+    }
+
+    @media (min-width: 1440px) {
+      .container-images__img1 {
+        @include container-images__img;
+      }
+      .container-images__img2 {
+        @include container-images__img($margin-top: 50px);
+      }
+      .container-images__img3 {
+        @include container-images__img;
+      }
+      .container-images__img4 {
+        @include container-images__img;
+      }
+      .container-images__img5 {
+        @include container-images__img($margin-top: 50px);
+      }
+      .container-images__img6 {
+        @include container-images__img;
+      }
+    }
+
+    .container-images__picture {
+      width: 140px;
+      height: 200px;
+      justify-content: center;
+      margin: 20px;
+      margin: 0;
+      border-bottom: 3px;
+    }
+
+    .container-images__profession {
+      font-size: 8px;
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      margin: 0;
+    }
+
+    .container-images__name {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 50%;
+      justify-content: space-evenly;
+    }
+  }
+
+  .footer {
+    font-size: 12px;
+    color: rgb(226, 224, 224);
+    text-align: center;
+    margin-top: 50px;
+  }
+}
